@@ -4,8 +4,6 @@ package com.tw;
 import java.util.*;
 
 public class Library {
-    String mString = "杨开广, 12345, 数学: 98, 英语: 88.12, 语文: 87.2, 编程: 89";
-    String mString1 = "杨广, 123456, 数学: 98, 英语: 88.12, 语文: 87.2, 编程: 100";
 
     public static final String NAME_VAILD= "[\u4e00-\u9fa5]{2,4}";
     public static final String ID_VAILD= "^[1-9]\\d{1,9}$";
