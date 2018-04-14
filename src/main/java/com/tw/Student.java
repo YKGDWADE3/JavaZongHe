@@ -1,6 +1,8 @@
 package com.tw;
 
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.TreeMap;
 
 /**
  * 此类存储单个学生信息,id相同认为是同一个学生
@@ -12,14 +14,16 @@ public class Student {
     private long id;
 
     //成绩有四门语文，数学，英语，编程
-    private HashMap<CourseEnum, Double> grades;
+    private TreeMap<CourseEnum, Double> grades;
+
+    private Double totalGrade;
 
     public Student(){};
     public Student(String name) {
         this.name = name;
     }
 
-    public Student(String name, long id, HashMap<CourseEnum, Double> grades) {
+    public Student(String name, long id, TreeMap<CourseEnum, Double> grades) {
         this.name = name;
         this.id = id;
         this.grades = grades;
@@ -46,11 +50,19 @@ public class Student {
         this.id = id;
     }
 
-    public HashMap<CourseEnum, Double> getGrades() {
+    public TreeMap<CourseEnum, Double> getGrades() {
         return grades;
     }
 
-    public void setGrades(HashMap<CourseEnum, Double> grades) {
+    public void setGrades(TreeMap<CourseEnum, Double> grades) {
         this.grades = grades;
+    }
+
+    public Double getTotalGrade() {
+        return totalGrade;
+    }
+
+    public void setTotalGrade(Double totalGrade) {
+        this.totalGrade = totalGrade;
     }
 }

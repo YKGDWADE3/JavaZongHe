@@ -6,8 +6,8 @@ import java.util.Map;
 
 public enum CourseEnum implements Comparable<CourseEnum>{
 
-    CHINESE("语文", 1),
-    MATHS("数学", 2),
+    MATHS("数学", 1),
+    CHINESE("语文", 2),
     ENGLISH("英语", 3),
     PROGRAMMING("编程", 4),
     UNKNOWN("未知", 5),
