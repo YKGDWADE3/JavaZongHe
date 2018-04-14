@@ -21,5 +21,7 @@ public class GlobalConstants {
             "========================";
 
     public static final String QUERY_SUCCESS_FOOTER = "========================";
+    public static final String QUERY_SUCCESS_TOTAL = "全班总分平均数：";
+    public static final String QUERY_SUCCESS_MED = "全班总分中位数：";
 
 }

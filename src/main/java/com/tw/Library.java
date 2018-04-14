@@ -40,6 +40,7 @@ public class Library {
                         println(GlobalConstants.QUERY_SUCCESS_TITLE);
                         klass.printQueryStudents();
                         println(GlobalConstants.QUERY_SUCCESS_FOOTER);
+
                         break;
                     }
                 }

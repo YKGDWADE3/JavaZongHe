@@ -107,9 +107,28 @@ public class Klass {
                 System.out.print("|" + entry1.getValue());
             }
             System.out.println("|" + temp.getTotalGrade() + "|" + String.format("%.2f", temp.getTotalGrade() / CourseEnum.getCourseEnumNumber()));
+            System.out.println(GlobalConstants.QUERY_SUCCESS_FOOTER);
+            System.out.println(GlobalConstants.QUERY_SUCCESS_TOTAL + getTotalGrades());
+            System.out.println(GlobalConstants.QUERY_SUCCESS_MED + String.format("%.2f", getClassMedGrades()));
+
         }
     }
 
+    public double getClassMedGrades() {
+        ArrayList<Double> studentGrades = new ArrayList<>();
+        Iterator iterator = mStudents.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<Long, Student> entry = (Map.Entry<Long, Student>) iterator.next();
+            studentGrades.add(entry.getValue().getTotalGrade());
+        }
+        Collections.sort(studentGrades);
+        int size = studentGrades.size();
+        if (size % 2 == 0) {
+            return (studentGrades.get(size / 2) + studentGrades.get(size / 2 - 1)) / 2;
+        } else {
+            return studentGrades.get(size / 2);
+        }
+    }
     public HashMap<Long, Student> getStudents() {
         return mStudents;
     }
